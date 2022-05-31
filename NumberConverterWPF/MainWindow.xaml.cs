@@ -146,7 +146,7 @@ namespace NumberConverterWPF
         private void random_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            if (checkBases()) leftNumber.Text = decToImal(random.Next(100, 9999), int.Parse(leftBase.Text));
+            if (checkBases()) leftNumber.Text = decToImal(random.Next(250, 9999), int.Parse(leftBase.Text));
         }
     }
 }
