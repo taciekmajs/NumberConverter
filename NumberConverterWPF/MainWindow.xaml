@@ -1,0 +1,50 @@
+﻿<Window x:Class="NumberConverterWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumberConverterWPF"
+        mc:Ignorable="d"
+        Background="#F6F0ED"
+        FontSize="20"
+        Title="MainWindow" Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Background" Value="#7EA8BE"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Background" Value="#FFFFFF"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Label FontSize="60" HorizontalContentAlignment="Center" Content="Number Converter" HorizontalAlignment="Left" Height="91" Margin="10,10,0,0" VerticalAlignment="Top" Width="521"/>
+        <TextBox FontSize="40" x:Name="leftBase" TextAlignment="Center" HorizontalAlignment="Left" Height="72" Margin="89,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center" Height="31" Margin="337,135,0,0" TextWrapping="Wrap" Text="(2-32)Base" VerticalAlignment="Top" Width="128"/>
+        <TextBox FontSize="40" x:Name="rightBase" TextAlignment="Center" HorizontalAlignment="Left" Height="72" Margin="337,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="123"/>
+        <Button Click ="Arrow_Click" Content="&lt;=" HorizontalAlignment="Left" Height="66" Margin="234,322,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="leftNumber" TextAlignment="Center" HorizontalAlignment="Left" Height="72" Margin="84,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox IsReadOnly="True" TextAlignment="Center" x:Name="rightNumber" HorizontalAlignment="Left" Height="72" Margin="315,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Button FontWeight="Bold" Click ="Convert_Click" Content="Convert!" HorizontalAlignment="Left" Height="66" Margin="208,408,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="error" Content="" HorizontalAlignment="Center" Height="54" Margin="0,474,0,0" VerticalAlignment="Top" Width="530"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center" Height="31" Margin="79,135,0,0" TextWrapping="Wrap" Text="(2-32)Base" VerticalAlignment="Top" Width="128"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center" Height="31" Margin="326,292,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="128"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" TextAlignment="Center" Height="31" Margin="96,292,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="128"/>
+        <Button x:Name="lBin" Content="binary" HorizontalAlignment="Left" Height="24" Margin="0,164,0,0" VerticalAlignment="Top" Width="89" Click="lBin_Click"/>
+        <Button x:Name="lDec" Content="decimal" HorizontalAlignment="Left" Height="24" Margin="0,188,0,0" VerticalAlignment="Top" Width="89" Click="lDec_Click"/>
+        <Button x:Name="lHex" Content="hexadecimal" HorizontalAlignment="Left" Height="24" Margin="0,212,0,0" VerticalAlignment="Top" Width="89" Click="lHex_Click"/>
+        <Button x:Name="rBin" Content="binary" HorizontalAlignment="Left" Height="24" Margin="460,164,0,0" VerticalAlignment="Top" Width="89" Click="rBin_Click"/>
+        <Button x:Name="rDec" Content="decimal" HorizontalAlignment="Left" Height="24" Margin="460,188,0,0" VerticalAlignment="Top" Width="89" Click="rDec_Click"/>
+        <Button x:Name="rHex" Content="hexadecimal" HorizontalAlignment="Left" Height="24" Margin="460,212,0,0" VerticalAlignment="Top" Width="89" Click="rHex_Click"/>
+        <Button x:Name="lUp" Content="^" HorizontalAlignment="Left" Height="35" Margin="207,164,0,0" VerticalAlignment="Top" Width="35" Click="lUp_Click"/>
+        <Button x:Name="lDown" Content="v" HorizontalAlignment="Left" Height="35" Margin="207,201,0,0" VerticalAlignment="Top" Width="35" Click="lDown_Click"/>
+        <Button x:Name="rUp" Content="^" HorizontalAlignment="Left" Height="35" Margin="302,164,0,0" VerticalAlignment="Top" Width="35" Click="rUp_Click"/>
+        <Button x:Name="rDown" Content="v" HorizontalAlignment="Left" Height="35" Margin="302,201,0,0" VerticalAlignment="Top" Width="35" Click="rDown_Click"/>
+        <Button x:Name="random" Content="Random" HorizontalAlignment="Left" Height="35" Margin="0,322,0,0" VerticalAlignment="Top" Width="84" Click="random_Click"/>
+
+    </Grid>
+</Window>
